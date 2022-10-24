@@ -4,36 +4,34 @@ const Reaction = require('./Reaction');
 // Schema to create Post model
 const thoughtSchema = new Schema(
   {
-    published: {
-      type: Boolean,
-      default: false,
+    thoughtText: {
+      type: String,
+      required: true,
+      minLength: 1,
+      maxLength: 280,
     },
     createdAt: {
       type: Date,
       default: Date.now,
     },
-    advertiserFriendly: {
-      type: Boolean,
-      default: true,
-    },
-    description: {
+    username: {
       type: String,
-      minLength: 15,
-      maxLength: 500,
+      required: true,
     },
+        
     reactions: [Reaction],
   },
   {
     toJSON: {
       virtuals: true,
     },
-    id: false,
+    
   }
 );
 
-// Create a virtual property `reactions` that gets the amount of reactions per thought
+// Create a virtual property `reactionCount` that gets the amount of reactions.
 thoughtSchema
-  .virtual('getReactions')
+  .virtual('reactionCount')
   // Getter
   .get(function () {
     return this.reactions.length;

@@ -1,0 +1,24 @@
+{
+  "name": "social-media-api-m18",
+  "version": "1.0.0",
+  "description": "Social Media RESTful API using a noSQL database",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node utils/seed"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conradjohnson/social-network-nosql-api.git"
+  },
+  "author": "ConradJohnson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/conradjohnson/social-network-nosql-api/issues"
+  },
+  "homepage": "https://github.com/conradjohnson/social-network-nosql-api#readme"
+}
