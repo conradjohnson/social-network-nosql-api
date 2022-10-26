@@ -5,14 +5,8 @@
 
 # Social Media API - NoSQL
 
-## Description
-
-Social Network API powered by MongoDB... a NoSQL driven api service application that can power a social network of friends and shared thoughts and reactions.  Users can have friends and thoughts with reactions by friends or user.  API provides CRUD operations for Users and Thoughts, and CRD operations for Reactions.  Deleting a user will remove that user from others' friend array as well as their thoughts.  Deleting a thought will remove that thought from the User's thoughts array.
-
-
-
 ## Table of Contents
-
+- [Description and Routes](#description)
 - [Demo and Screen Shots](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -20,11 +14,38 @@ Social Network API powered by MongoDB... a NoSQL driven api service application 
 - [License](#license)
 - [Questions](#questions)
 
+## Description
+
+Social Network API powered by MongoDB... a NoSQL driven api service application that can power a social network of friends and shared thoughts and reactions.  Users can have friends and thoughts with reactions by friends or user.  API provides CRUD operations for Users and Thoughts, and CRD operations for Reactions.  Deleting a user will remove that user from others' friend array as well as their thoughts.  Deleting a thought will remove that thought from the User's thoughts array.  Thought Detail (lookups by thoughtId) included expanded arrays for reactions, and User Detail (lookups by userId) included expanded arrays of thoughts and reactions.
+
+Routes:
+
+Users
+- GET /api/users/
+- GET /api/users/[user id]
+- POST /api/users/
+- PUT /api/users/[user id]
+- DELETE /api/users/[user id]
+- POST /api/users/[user id]/friends/[friend id]
+- DELETE /api/users/[user id]/friends/[friend id]
+
+Thoughts
+- GET /api/thoughts/
+- GET /api/thoughts/[thought id]
+- POST /api/thoughts/
+- PUT /api/thoughts/[thougth id]
+- DELETE /api/thoughts/[thought id]
+- POST /api/thoughts/[thought id]/reactions/
+- DELETE /api/thoughts/[thought id]/reactions/[reaction id]
+
+
+
+
 ## Demo
 ***
 
 Demo:
-[Demo Video Link](https://drive.google.com/file/d/1KjW-DwfQJvO-JKvwX2NGsv-5Xb_IofUd/view)
+[Demo Video Link](https://drive.google.com/file/d/1_13wY6iDRThSXSI3SwXWqOGHbllnMd4B/view)
 
 
 

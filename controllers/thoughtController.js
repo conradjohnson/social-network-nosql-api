@@ -105,7 +105,7 @@ function addThoughtReaction(req, res) {
 }
 
 // DELETE a thought reaction : /api/thoughts/:thoughtId/reactions/:reactionId
-function removeThoughtReaction(req, res) {s
+function removeThoughtReaction(req, res) {
   Thought.findOneAndUpdate(
     { _id: ObjectId(req.params.thoughtId) },
     { $pull: { reactions: { _id: ObjectId(req.params.reactionId) } } },
