@@ -1,7 +1,7 @@
 const { Schema, model } = require('mongoose');
 const Reaction = require('./Reaction');
 const moment = require('moment');
-// Schema to create Post model
+// Schema to create thought model
 const thoughtSchema = new Schema(
   {
     thoughtText: {
@@ -31,7 +31,7 @@ const thoughtSchema = new Schema(
   }
 );
 
-// Create a virtual property `reactionCount` that gets the amount of reactions.
+// `reactionCount` gets the amount of reactions.
 thoughtSchema
   .virtual('reactionCount')
   // Getter
@@ -39,7 +39,7 @@ thoughtSchema
     return this.reactions.length;
   });
 
-// Initialize our Video model
+// Initialize our Thought model
 const Thought = model('thought', thoughtSchema);
 
 module.exports = Thought;

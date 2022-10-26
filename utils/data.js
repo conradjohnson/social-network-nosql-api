@@ -1,3 +1,4 @@
+//users seed example data
 const userData = [
 {
     username: "Jimmy",
@@ -30,6 +31,7 @@ const userData = [
 
 ];
 
+// thoughts seed example data
 const thoughtData = [
     {
         thoughtText: "Which statement is correct? A bottle is half-filled or a bottle half empty."
@@ -77,6 +79,7 @@ const thoughtData = [
     },
 ]
 
+// reactions seed example data
 const reactionData = [
     {
         reactionBody: "Cool"
@@ -129,7 +132,7 @@ const reactionData = [
 
 ]
 
-
+// seed helper functions
 const genRandomIndex = (arr) => Math.floor(Math.random() * arr.length);
 const getRandomThought = () => {
      return thoughtData[genRandomIndex(thoughtData)];

@@ -13,18 +13,32 @@ Social Network API powered by MongoDB... a NoSQL driven api service application 
 
 ## Table of Contents
 
+- [Demo and Screen Shots](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
 - [Questions](#questions)
 
+## Demo
+***
+
+Demo:
+[Demo Video Link](https://drive.google.com/file/d/1KjW-DwfQJvO-JKvwX2NGsv-5Xb_IofUd/view)
+
+
+
+Screen Shot:
+
+![Screen Shot](img/screen1.png)
 
 
 ## Installation
 ***
 
-clone repository.  'npm i' to install packages.  Seed data and seeding is provided in 'utils' directory. 'npm run seed' to seed database. 
+1. clone repository.  
+2. 'npm i' to install packages.  
+3. (optional) - Seed data and seeding is provided in 'utils' directory. 'npm run seed' to seed database. 
 
 ## Usage
 ***
@@ -36,7 +50,7 @@ clone repository.  'npm i' to install packages.  Seed data and seeding is provid
 
 [ConradJohnson](https://github.com/ConradJohnson)
 
-[](https://github.com/)
+
 
  ## License
  ***
