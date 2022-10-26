@@ -129,4 +129,10 @@ const reactionData = [
 
 ]
 
-module.exports = {userData, thoughtData, reactionData}
+
+const genRandomIndex = (arr) => Math.floor(Math.random() * arr.length);
+const getRandomThought = () => {
+     return thoughtData[genRandomIndex(thoughtData)];
+  };
+
+module.exports = {userData, thoughtData, reactionData, genRandomIndex, getRandomThought}
