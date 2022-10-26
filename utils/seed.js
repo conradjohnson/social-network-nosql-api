@@ -2,6 +2,7 @@ const connection = require('../config/connection');
 const { ObjectId } = require('mongoose').Types;
 const { User, Thought, Reaction } = require('../models');
 const { userData, thoughtData, reactionData, genRandomIndex, getRandomThought } = require('./data');
+const moment = require('moment');
 
 connection.on('error', (err) => err);
 
@@ -30,6 +31,7 @@ connection.once('open', async () => {
         thoughts.push({
           thoughtText: randomThought(thoughtData),
           username: randomUsername(userData),
+          createdAt: moment().format('YYYY-MM-HH hh:mm:ss'),
           reactions: [ reactions[genRandomIndex(reactions)], reactions[genRandomIndex(reactions)] ],
         });
       };
